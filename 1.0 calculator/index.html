@@ -11,11 +11,12 @@
 <body class="bg-gray-400 mt-16 flex items-center justify-center md:hidden">
    <form class="form-container mb-8">
     <div>     <!-- Input field to display the result -->
-        <textarea type="text" class="mb-4 border-4 bg-orange-500 text-right  w-full" rows="2" readonly ></textarea></div>
+        <textarea type="text" class="mb-4 border-4 bg-orange-500 text-right  w-full" rows="2" readonly ></textarea>
+    </div>
         <input type="text" class="mb-4 border-4 bg-orange-500  text-right w-full"  value ="0" readonly />
    
     <hr class="w-full mb-4 text-gray-700" />
- 
+        <!-- button container -->
         <div class="grid grid-cols-4 gap-4">
             <button onclick="appendToDisplay('c')" class="btn w-12 h-12 bg-red-500 text-gray-100 rounded-lg">C</button>
             <button onclick="appendToDisplay('()')" class="btn w-12 h-12 bg-gray-100 text-green-400 rounded-lg">()</button>
@@ -40,10 +41,16 @@
            
    
     </div>
-    <div>
+    <div class="flex items-center justify-center">
+        <hr class="mt-4 w-20 mb-4 border-b-2 border-black rounded-full" />
+      </div>
 
-    </div>
+    
+
+   
     
     </form>
+ 
+
 </body>
 </html>
