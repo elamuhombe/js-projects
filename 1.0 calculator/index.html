@@ -9,11 +9,12 @@
     <script src="https://cdnjs.cloudflare.com/ajax/libs/material-ui/5.2.5/material-icons.min.js" integrity="sha512-XfuDEpFh9aQ+UbYG+Mq7N3dP6Y0MN/GcBwvBCm7mOXsp4YlX8pN+OPWqqMof4xL2QG03aLbzEBW2bNBB0sYGGw==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
 </head>
 <body class="bg-gray-400 mt-16 flex items-center justify-center md:hidden">
-   <form class="form-container">
+   <form class="form-container mb-8">
     <div>     <!-- Input field to display the result -->
-        <input type="text" class="mb-4 border-4 bg-orange-500 w-full" readonly /></div>
+        <textarea type="text" class="mb-4 border-4 bg-orange-500 text-right  w-full" rows="2" readonly ></textarea></div>
+        <input type="text" class="mb-4 border-4 bg-orange-500  text-right w-full"  value ="0" readonly />
    
-    
+    <hr class="w-full mb-4 text-gray-700" />
  
         <div class="grid grid-cols-4 gap-4">
             <button onclick="appendToDisplay('c')" class="btn w-12 h-12 bg-red-500 text-gray-100 rounded-lg">C</button>
