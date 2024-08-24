@@ -1,56 +1,150 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
+  <head>
     <!-- Metadata -->
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Calculator</title>
     <!-- Stylesheets -->
-    <link href="src/css/styles.css" rel="stylesheet">
-    <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
+    <link href="src/css/styles.css" rel="stylesheet" />
+    <link
+      href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css"
+      rel="stylesheet" />
     <!-- JavaScript Library -->
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/material-ui/5.2.5/material-icons.min.js" integrity="sha512-XfuDEpFh9aQ+UbYG+Mq7N3dP6Y0MN/GcBwvBCm7mOXsp4YlX8pN+OPWqqMof4xL2QG03aLbzEBW2bNBB0sYGGw==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
-</head>
-<body class="bg-gray-400 mt-16 flex items-center justify-center md:hidden">
-   <form class="form-container pt-8 mb-8">
-    <!-- Result Display -->
-    <div>
-        <textarea type="text" class="mb-4 pr-8 text-right  pr-4 w-full " rows="2" readonly ></textarea>
-    </div>
-    <!-- Input field for expression -->
-    <input type="text" class="mb-4 pr-8  text-gray-700 text-right w-full"  value ="0" readonly />
-    <!-- Separator -->
-    <hr class="w-full mb-4 text-gray-700" />
-    <!-- Button container -->
-    <div class="grid grid-cols-4 gap-4">
+    <script
+      src="https://cdnjs.cloudflare.com/ajax/libs/material-ui/5.2.5/material-icons.min.js"
+      integrity="sha512-XfuDEpFh9aQ+UbYG+Mq7N3dP6Y0MN/GcBwvBCm7mOXsp4YlX8pN+OPWqqMof4xL2QG03aLbzEBW2bNBB0sYGGw=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"></script>
+  </head>
+  <body class="bg-gray-400 mt-16 flex items-center justify-center md:hidden">
+    <form class="form-container pt-8 mb-8">
+      <!-- Result Display -->
+      <div>
+        <textarea
+          type="text"
+          class="mb-4 pr-8 text-right pr-4 w-full"
+          rows="2"
+          readonly></textarea>
+      </div>
+      <!-- Input field for expression -->
+      <input
+        type="text"
+        class="mb-4 pr-8 text-gray-700 text-right w-full"
+        value="0"
+        readonly />
+      <!-- Separator -->
+      <hr class="w-full mb-4 text-gray-700" />
+      <!-- Button container -->
+      <div class="grid grid-cols-4 gap-4">
         <!-- Buttons for operations and numbers -->
-        <button onclick="appendToTextarea('c')" class="btn w-12 h-12 bg-red-500  text-gray-100 rounded-lg">C</button>
-        <button onclick="appendToTextarea('()')" class="btn w-12 h-12 bg-gray-100 text-green-400 rounded-lg">()</button>
-        <button onclick="appendToTextarea('%')" class="btn w-12 h-12 bg-gray-100 text-green-400 rounded-lg">%</button>
-        <button onclick="appendToTextarea('/')" class="btn w-12 h-12 bg-gray-100 text-green-400 rounded-lg">/</button>
-        <button onclick="appendToTextarea('7')" class="btn w-12 h-12 bg-gray-100 text-gray-700 rounded-lg">7</button>
-        <button onclick="appendToTextarea('8')" class="btn w-12 h-12 bg-gray-100 text-gray-700 rounded-lg">8</button>
-        <button onclick="appendToTextarea('9')" class="btn w-12 h-12 bg-gray-100 text-gray-700 rounded-lg">9</button>
-        <button onclick="appendToTextarea('x')" class="btn w-12 h-12 bg-gray-100 text-green-400 rounded-lg">x</button>
-        <button onclick="appendToTextarea('4')" class="btn w-12 h-12 bg-gray-100 text-gray-700 rounded-lg">4</button>
-        <button onclick="appendToTextarea('5')" class="btn w-12 h-12 bg-gray-100 text-gray-700 rounded-lg">5</button>
-        <button onclick="appendToTextarea('6')" class="btn w-12 h-12 bg-gray-100 text-gray-700 rounded-lg ">6</button>
-        <button onclick="appendToTextarea('-')" class="btn w-12 h-12 bg-gray-100 text-green-400 rounded-lg">-</button>
-        <button onclick="appendToTextarea('1')" class="btn w-12 h-12 bg-gray-100 text-gray-700 rounded-lg">1</button>
-        <button onclick="appendToTextarea('2')" class="btn w-12 h-12 bg-gray-100 text-gray-700 rounded-lg">2</button>
-        <button onclick="appendToTextarea('3')" class="btn w-12 h-12 bg-gray-100 text-gray-700 rounded-lg">3</button>
-        <button onclick="appendToTextarea('+')" class="btn w-12 h-12 bg-gray-100 text-green-400 rounded-lg">+</button>
-        <button onclick="appendToTextarea('+/-')" class="btn w-12 h-12 bg-gray-100 text-gray-700 rounded-lg">+/-</button>
-        <button onclick="appendToTextarea('0')" class="btn w-12 h-12 bg-gray-100 text-gray-700 rounded-lg">0</button>
-        <button onclick="appendToTextarea('.')" class="btn w-12 h-12 bg-gray-100 text-green-400 rounded-lg">.</button>
-        <button onclick="appendToTextarea('=')" class="btn w-12 h-12 bg-green-400 text-white rounded-lg">=</button>
-    </div>
-    <!-- Separator -->
-    <div class="flex items-center justify-center">
+        <button
+          onclick="appendToTextarea('c')"
+          class="btn w-12 h-12 bg-red-500 text-gray-100 rounded-lg">
+          C
+        </button>
+        <button
+          onclick="appendToTextarea('()')"
+          class="btn w-12 h-12 bg-gray-100 text-green-400 rounded-lg">
+          ()
+        </button>
+        <button
+          onclick="appendToTextarea('%')"
+          class="btn w-12 h-12 bg-gray-100 text-green-400 rounded-lg">
+          %
+        </button>
+        <button
+          onclick="appendToTextarea('/')"
+          class="btn w-12 h-12 bg-gray-100 text-green-400 rounded-lg">
+          /
+        </button>
+        <button
+          onclick="appendToTextarea('7')"
+          class="btn w-12 h-12 bg-gray-100 text-gray-700 rounded-lg">
+          7
+        </button>
+        <button
+          onclick="appendToTextarea('8')"
+          class="btn w-12 h-12 bg-gray-100 text-gray-700 rounded-lg">
+          8
+        </button>
+        <button
+          onclick="appendToTextarea('9')"
+          class="btn w-12 h-12 bg-gray-100 text-gray-700 rounded-lg">
+          9
+        </button>
+        <button
+          onclick="appendToTextarea('x')"
+          class="btn w-12 h-12 bg-gray-100 text-green-400 rounded-lg">
+          x
+        </button>
+        <button
+          onclick="appendToTextarea('4')"
+          class="btn w-12 h-12 bg-gray-100 text-gray-700 rounded-lg">
+          4
+        </button>
+        <button
+          onclick="appendToTextarea('5')"
+          class="btn w-12 h-12 bg-gray-100 text-gray-700 rounded-lg">
+          5
+        </button>
+        <button
+          onclick="appendToTextarea('6')"
+          class="btn w-12 h-12 bg-gray-100 text-gray-700 rounded-lg">
+          6
+        </button>
+        <button
+          onclick="appendToTextarea('-')"
+          class="btn w-12 h-12 bg-gray-100 text-green-400 rounded-lg">
+          -
+        </button>
+        <button
+          onclick="appendToTextarea('1')"
+          class="btn w-12 h-12 bg-gray-100 text-gray-700 rounded-lg">
+          1
+        </button>
+        <button
+          onclick="appendToTextarea('2')"
+          class="btn w-12 h-12 bg-gray-100 text-gray-700 rounded-lg">
+          2
+        </button>
+        <button
+          onclick="appendToTextarea('3')"
+          class="btn w-12 h-12 bg-gray-100 text-gray-700 rounded-lg">
+          3
+        </button>
+        <button
+          onclick="appendToTextarea('+')"
+          class="btn w-12 h-12 bg-gray-100 text-green-400 rounded-lg">
+          +
+        </button>
+        <button
+          onclick="appendToTextarea('+/-')"
+          class="btn w-12 h-12 bg-gray-100 text-gray-700 rounded-lg">
+          +/-
+        </button>
+        <button
+          onclick="appendToTextarea('0')"
+          class="btn w-12 h-12 bg-gray-100 text-gray-700 rounded-lg">
+          0
+        </button>
+        <button
+          onclick="appendToTextarea('.')"
+          class="btn w-12 h-12 bg-gray-100 text-green-400 rounded-lg">
+          .
+        </button>
+        <button
+          onclick="appendToTextarea('=')"
+          class="btn w-12 h-12 bg-green-400 text-white rounded-lg">
+          =
+        </button>
+      </div>
+      <!-- Separator -->
+      <div class="flex items-center justify-center">
         <hr class="mt-4 w-20 mb-4 border-b-2 border-black rounded-full" />
-    </div>
+      </div>
     </form>
     <!-- JavaScript -->
     <script src="src/js/script.js"></script>
-</body>
+  </body>
 </html>
