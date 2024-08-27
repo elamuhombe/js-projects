@@ -4,54 +4,52 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Todo List App</title>
-    
+
     <!-- Link to external stylesheet -->
     <link rel="stylesheet" href="css/styles.css" />
-    
+
     <!-- Link to Kanit font from CDN -->
-    <link href="https://fonts.cdnfonts.com/css/kanit-medium" rel="stylesheet">
+    <link href="https://fonts.cdnfonts.com/css/kanit-medium" rel="stylesheet" />
   </head>
-  
+
   <body>
     <!-- Main container -->
     <div id="container">
-      
       <!-- Application title -->
       <h1>TODO LIST</h1>
-      
+
       <!-- Search form -->
       <form name="search-list" class="search-form">
-        
-        <!-- Search icon -->
-        <img
-          src="images/search-icon.svg"
-          alt="Search Icon"
-          class="search-icon" />
-        
-        <!-- Search input field -->
-        <input
-          type="search"
-          name="query"
-          placeholder="Search... "
-          class="search-text-box" />
-        
+        <div class="search-container">
+          <!-- Search input field -->
+          <input
+            type="search"
+            name="query"
+            placeholder="Search... "
+            class="search-text-box" />
+
+          <!-- Search icon inside the text box -->
+          <img
+            src="images/search-icon.svg"
+            alt="Search Icon"
+            class="search-icon" />
+        </div>
+
         <!-- Filter dropdown for task status -->
         <select id="tasks" name="tasks">
           <option value="all">ALL</option>
           <option value="pending">PENDING</option>
           <option value="completed">COMPLETED</option>
         </select>
-        
       </form>
-      
+
       <!-- Section for displaying the todo lists -->
       <div class="todo-list"></div>
-      
+
       <!-- Button to add a new item to the list -->
       <div>
         <button class="add-item" name="add-item">+</button>
       </div>
-      
     </div>
   </body>
 </html>
