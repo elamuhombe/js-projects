@@ -49,6 +49,11 @@ h1 {
     border-color: #D0D0D0; /* Light gray border color */
     box-sizing: border-box; /* Include padding and border in element's total width and height */
 }
+/* Change border color on focus */
+.search-text-box:focus {
+    border-color: #3498DB; /* Border color when input is focused */
+    outline: none; /* Remove default focus outline */
+}
 
 /* Styling for the search icon */
 .search-icon {
