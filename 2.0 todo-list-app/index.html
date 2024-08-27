@@ -48,8 +48,18 @@
 
       <!-- Button to add a new item to the list -->
       <div class="button-container">
-        <button class="add-item" name="add-item">+</button>
+        <button class="add-item" name="add-item" onclick="showForm()">+</button>
       </div>
+      <!-- Hidden form for adding a task -->
+<div id="task-form-container" class="task-form-container">
+    <form id="task-form" class="task-form">
+      <label for="task-name">Task Name:</label>
+      <input type="text" id="task-name" name="task-name" placeholder="Enter task name" required />
+      <div class="form-buttons">
+        <button type="button" onclick="hideForm()" class="cancel-button">Cancel</button>
+        <button type="submit" class="save-button">Save</button>
+      </div>
+    </form>
     </div>
   </body>
 </html>
