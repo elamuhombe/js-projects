@@ -1,57 +1,83 @@
+/* Apply box-sizing, margin, and padding to all elements */
 * {
-    box-sizing: border-box;
-    margin: 0;
-    padding: 0;
+    box-sizing: border-box; /* Include padding and border in element's total width and height */
+    margin: 0; /* Remove default margin */
+    padding: 0; /* Remove default padding */
 }
 
+/* Container styling for centralizing content */
 #container {
-    width: 1200px;
-    margin: 50px auto;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    flex-direction: column; /* Ensure vertical centering */
+    width: 1200px; /* Set a fixed width for the container */
+    margin: 50px auto; /* Center the container horizontally with 50px margin on top and bottom */
+    display: flex; /* Use flexbox for alignment */
+    justify-content: center; /* Center items horizontally */
+    align-items: center; /* Center items vertically */
+    flex-direction: column; /* Stack children vertically */
 }
 
+/* Styling for the main heading */
 h1 {
-    text-align: center;
-    margin-top: 4rem;
-    margin-bottom: 2rem; /* Adjust as needed */
+    text-align: center; /* Center the text horizontally */
+    margin-top: 4rem; /* Space above the heading */
+    margin-bottom: 2rem; /* Space below the heading */
 }
 
+/* Search form styling */
 .search-form {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    gap: 1rem;
-    margin-top: 4rem;
+    display: flex; /* Use flexbox for alignment */
+    justify-content: center; /* Center items horizontally */
+    align-items: center; /* Center items vertically */
+    gap: 1rem; /* Space between child elements */
+    margin-top: 4rem; /* Space above the form */
 }
 
+/* Container for aligning input field and search icon */
+.search-container {
+    position: relative; /* Positioning context for the icon */
+    display: flex; /* Use flexbox for alignment */
+    align-items: center; /* Center items vertically */
+    width: 400px; /* Set width to match input field */
+}
+
+/* Styling for the search input field */
 .search-text-box {
-    width: 400px;
-    height: 40px;
-    border-radius: 8px;
-    border-style: double;
-    border-color: #D0D0D0;
+    width: 100%; /* Full width of the container */
+    height: 40px; /* Height of the input field */
+    padding-right: 40px; /* Space for the icon inside the input */
+    border-radius: 8px; /* Rounded corners */
+    border-style: double; /* Double border style */
+    border-color: #D0D0D0; /* Light gray border color */
+    box-sizing: border-box; /* Include padding and border in element's total width and height */
 }
-/* active select menu */
-#tasks{
-    display: flex;
-   justify-content: center;
-   align-items: center;
-   padding: 3px;
-    width:140px;
-    height: 38px;
-    font-size: 18px;
-    font-family: 'Kanit Medium', sans-serif;
-    color: #fff;
-    border-radius: 8px;
-    border-style: none;
-    background-color: #3498DB;
-    border-color: #3498DB;
+
+/* Styling for the search icon */
+.search-icon {
+    position: absolute; /* Absolute positioning inside the container */
+    right: 10px; /* Space from the right edge of the container */
+    width: 24px; /* Width of the icon */
+    height: 24px; /* Height of the icon */
+    pointer-events: none; /* Icon does not block input interactions */
 }
-/* select options */
+
+/* Styling for the select menu */
+#tasks {
+    display: flex; /* Use flexbox for alignment */
+    justify-content: center; /* Center items horizontally */
+    align-items: center; /* Center items vertically */
+    padding: 3px; /* Padding inside the select box */
+    width: 140px; /* Width of the select menu */
+    height: 38px; /* Height of the select menu */
+    font-size: 18px; /* Font size for the text */
+    font-family: 'Kanit Medium', sans-serif; /* Font family */
+    color: #fff; /* Text color */
+    border-radius: 8px; /* Rounded corners */
+    border-style: none; /* Remove default border */
+    background-color: #3498DB; /* Background color */
+    border-color: #3498DB; /* Border color (not visible due to none style) */
+}
+
+/* Styling for select options */
 select option {
-    background-color: #fff; /* Optional: Customize the option background */
-    color: #333; /* Optional: Customize option text color */
-  }
+    background-color: #fff; /* Background color for options */
+    color: #333; /* Text color for options */
+}
