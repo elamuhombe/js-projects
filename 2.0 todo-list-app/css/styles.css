@@ -81,3 +81,29 @@ select option {
     background-color: #fff; /* Background color for options */
     color: #333; /* Text color for options */
 }
+/* Container for positioning the button */
+.button-container {
+    position: absolute; /* Position relative to the nearest positioned ancestor */
+    bottom: 20px; /* Distance from the bottom edge of the container */
+    right: 60px; /* Distance from the right edge of the container */
+    display: flex; /* Flexbox for centering button inside the container */
+    justify-content: flex-end; /* Align button to the right */
+  }
+/* Styling for the button */
+.add-item {
+    width: 40px; /* Width of the button */
+    height: 40px; /* Height of the button */
+    font-size: 24px; /* Font size for the button text */
+    border-radius: 50%; /* Make the button circular */
+    border: none; /* Remove default border */
+    background-color: #3498DB; /* Background color of the button */
+    color: #fff; /* Text color of the button */
+    display: flex; /* Flexbox for centering text */
+    align-items: center; /* Center text vertically */
+    justify-content: center; /* Center text horizontally */
+    cursor: pointer; /* Pointer cursor on hover */
+  }
+  
+  .add-item:hover {
+    background-color: #2980b9; /* Darker background color on hover */
+  }  
