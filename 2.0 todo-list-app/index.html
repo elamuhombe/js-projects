@@ -1,30 +1,39 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Todo List App</title>
     <!-- link to external stylesheet -->
-    <link rel="stylesheet" href="css/styles.css" /> 
-</head>
-<body>
+    <link rel="stylesheet" href="css/styles.css" />
+  </head>
+  <body>
     <!-- container -->
     <div id="container">
-        <!-- title -->
-        <h1>TODO LIST</h1>
-        <!-- search form -->
-        <form name="search-list">
-            <img src="images/search-icon.svg" alt="Search Icon" class="search-icon">
-            <input type="search" name="query" placeholder="Search...">
-            <div>
-                <button>ALL </button>
-                <button><img src="images/down-arrow.svg"/></button>
-            </div>
-           
-        </form>
-        <!-- todo lists -->
-        <div class="todo-list"></div>
-        <button class="add-item" name="add-item">+</button> 
+      <!-- title -->
+      <h1>TODO LIST</h1>
+      <!-- search form -->
+      <div></div>
+      <form name="search-list" class="search-form">
+        <img
+          src="images/search-icon.svg"
+          alt="Search Icon"
+          class="search-icon" />
+        <input
+          type="search"
+          name="query"
+          placeholder="Search... "
+          class="search-text-box" />
+
+        <select id="tasks" name="tasks">
+          <option value="all">All</option>
+          <option value="pending">Pending</option>
+          <option value="completed">completed</option>
+        </select>
+      </form>
+      <!-- todo lists -->
+      <div class="todo-list"></div>
+      <div><button class="add-item" name="add-item">+</button></div>
     </div>
-</body>
+  </body>
 </html>
