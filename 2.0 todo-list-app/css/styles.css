@@ -116,7 +116,7 @@ select option {
 .task-form-container {
     display: none; /* Hidden by default */
     position: absolute; /* Positioned relative to the nearest positioned ancestor */
-    bottom: 20px; /* Distance from the bottom edge of the container */
+    bottom: 80px; /* Distance from the bottom edge of the container */
     right: 20px; /* Distance from the right edge of the container */
     width: 300px; /* Width of the form container */
     padding: 20px; /* Padding inside the form container */
