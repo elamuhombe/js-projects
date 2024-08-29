@@ -28,11 +28,17 @@ function appendItem() {
         checkbox.classList.add('task-checkbox');
         newItem.append(checkbox);
 
-        // Create a label for the task item with the task name
+        // Create a label for the task item with the new task item
         let label = document.createElement('span');
         label.textContent = itemName.value;
         label.classList.add('task-label');
         newItem.append(label);
+
+        // Create an edit button for the task item
+        let button = document.createElement('button');
+        button.classList.add('editButton');
+        button.textContent = 'Edit'
+        newItem.append(button)
 
         // Append the new task item to the todo-list
         itemList.appendChild(newItem);
