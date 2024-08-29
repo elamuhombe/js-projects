@@ -1,3 +1,11 @@
+// Function to show the taskform
+function showForm(){
+    document.getElementById('task-form-container').style.display = 'block';
+}
+// Function to hide the task form
+function hideForm(){
+    document.getElementById('task-form-container').style.display = 'none';
+}
 // Function to append task name to todo-list 
 function appendItem() {
     // Select the todo-list container element
@@ -12,41 +20,41 @@ function appendItem() {
     // Check if the task name is not empty
     if (itemNameValue) {
         // Create a new list item element
-        let newItem = document.createElement('li'); // Changed to 'li' for better semantics
+        let newItem = document.createElement('li');
 
         // Create a checkbox for the new task item
         let checkbox = document.createElement('input');
         checkbox.type = 'checkbox';
         checkbox.classList.add('task-checkbox');
-        newItem.appendChild(checkbox);
+        newItem.append(checkbox);
 
         // Create a label for the task item with the new task item
         let label = document.createElement('span');
         label.textContent = itemName.value;
         label.classList.add('task-label');
-        newItem.appendChild(label);
+        newItem.append(label);
 
         // Create an edit button for the task item
         let button = document.createElement('button');
         button.classList.add('editButton');
-        button.textContent = 'Edit';
-        newItem.appendChild(button);
+        button.textContent = 'Edit'
+        newItem.append(button)
 
         // Create a delete button for the task item
         let deleteButton = document.createElement('button');
         deleteButton.classList.add('deleteButton');
         deleteButton.textContent = 'Delete';
-        newItem.appendChild(deleteButton);
+        newItem.append(deleteButton);
 
         // Create hr
         let hrDiv = document.createElement('div');
         let hr = document.createElement('hr');
-        hrDiv.appendChild(hr); // Append the hr to the div element
+        // Append the hr to the div element
+        hrDiv.append(hr);
 
-        newItem.appendChild(hrDiv);
-        
+        newItem.append(hrDiv);
         // Append the new task item to the todo-list
-        itemList.appendChild(newItem);
+        itemList.append(newItem);
 
         // Clear the task name input field
         itemName.value = '';
