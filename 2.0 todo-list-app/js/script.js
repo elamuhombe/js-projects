@@ -40,6 +40,12 @@ function appendItem() {
         button.textContent = 'Edit'
         newItem.append(button)
 
+        // Create a delete button for the task item
+        let deleteButton = document.createElement('button');
+        deleteButton.classList.add('deleteButton');
+        deleteButton.textContent = 'Delete';
+        newItem.append(deleteButton);
+
         // Append the new task item to the todo-list
         itemList.appendChild(newItem);
 
