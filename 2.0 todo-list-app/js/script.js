@@ -46,6 +46,13 @@ function appendItem() {
         deleteButton.textContent = 'Delete';
         newItem.append(deleteButton);
 
+        // Create hr
+        let hrDiv = document.createElement('div');
+        let hr = document.createElement('hr');
+        // Append the hr to the div element
+        hrDiv.appendChild(hr);
+
+        newItem.append(hrDiv);
         // Append the new task item to the todo-list
         itemList.appendChild(newItem);
 
